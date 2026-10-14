@@ -19,8 +19,8 @@ pipeline {
         stage('Check Dockerfile') {
             steps {
                 script {
-                    if (!fileExists('src/Dockerfile')) {
-                        error 'src/Dockerfile not found!'
+                    if (!fileExists('src/dockerfile')) {
+                        error 'src/dockerfile not found!'
                     }
                 }
             }
@@ -88,12 +88,6 @@ pipeline {
 
         failure {
             echo 'Pipeline failed. Check the Jenkins console output.'
-        }
-
-        always {
-            sh '''
-                docker image prune -f || true
-            '''
         }
     }
 }
