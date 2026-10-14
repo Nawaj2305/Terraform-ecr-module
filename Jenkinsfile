@@ -6,7 +6,8 @@ pipeline {
         AWS_REGION       = 'us-east-1'
         AWS_ACCOUNT_ID   = '085831229262'
         ECR_REPOSITORY   = 'my-ecs-app'
-        AWS_CREDENTIALS  = 'aws-credentials'
+        AWS_CREDENTIALS = 'aws-ecr-credentials'
+        ECR_REGISTRY    = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
     }
 
     stages {
