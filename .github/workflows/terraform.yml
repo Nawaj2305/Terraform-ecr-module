@@ -8,6 +8,7 @@ on:
     paths:
       - '**.tf'
       - 'modules/**'
+      - 'src/**'
       - 'terraform.tfvars'
       - '.github/workflows/terraform.yml'
 
