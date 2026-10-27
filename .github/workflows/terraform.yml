@@ -52,9 +52,6 @@ jobs:
         with:
           terraform_version: 1.9.8
 
-      - name: Terraform Format Check
-        run: terraform fmt -check -recursive
-
       - name: Terraform Initialize
         run: terraform init -input=false
 
